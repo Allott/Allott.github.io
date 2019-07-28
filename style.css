@@ -1,0 +1,45 @@
+/* CSS files add styling rules to your content */
+/*https://fonts.google.com/specimen/Lato?selection.family=Lato*/
+body {
+  font-family: "lato";
+  margin: 0;
+}
+
+h1 {
+  color: #E79C57;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 420px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #8C3022;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #E79C57;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.header {
+  padding: 20px;
+  text-align: left;
+  background: #1F0004;
+  color: white;
+}
+
+.header:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.column {
+float: left;
+width: 50%;
+}
