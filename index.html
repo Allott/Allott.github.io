@@ -2,37 +2,71 @@
 <html lang="en">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <title>Hello!</title>
+    <title>Daniel Allott</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
     
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
   </head>  
-  <body bgcolor="#BD9450">
-    
-    <div class="header">
-      <div class="column">
-        <h1>
-        Daniel Allott :>
-        </h1></div>
-      <div class="column"><img src="pictures/DAn.png" alt="Dan" width="500" height="500"></div>
+  <body>  
+  
+  <div>
+    <div class="columnL">
+      <h1 id="h1">Daniel Allott</h1>
+      <p>Limitation breeds Innovation</p>
     </div>
+    <div class="columnR">
+      <img src="https://cdn.glitch.com/3b1684a4-f340-4b39-bbfd-2a53cb5e7dc5%2FDAn.png?v=1562962601674" alt="Dan" width="500" height="500">
+    </div>
+  </div>
+  
     
-    <div class="navbar">
-      <a href="#">Home</a>
-      <a href="#">CV</a>
-      <a href="#">Projects</a>
+    <div>
+      <div id="bar">
+        <ul class="nav nav-pills nav-justified">
+          <li class="active"><a data-toggle="tab" href="#home" class="tabc">Home</a></li>
+          <li><a data-toggle="tab" href="#menu1" class="tabc">Resume</a></li>
+          <li><a data-toggle="tab" href="#menu2" class="tabc">Sample Projects</a></li>
+          <li><a data-toggle="tab" href="#menu3" class="tabc">Contact</a></li>
+        </ul>
+      </div>
       
+
+    <div class="tab-content" id="content">
+      <div id="home" class="tab-pane fade in active" align="center">
+        <h3>Yo</h3>
+        <div class="b"><p>This is the work in progress version of my website. It servers as a advertising piece. This has been uploaded so I can show off but is only V 1.0. This text is placeholder for a Bio. Also note to self check if the buttons are broken on mobile!</p></div>
+       
+      </div>
+      <div id="menu1" class="tab-pane fade" align="center">
+        <div id="res"></div>
+      </div>
+      <div id="menu2" class="tab-pane fade" align="center">
+        <h3>Visualizing phylogenetic trees in virtual reality using hyperbolic space</h3>
+        <div class="b">
+          <p>My final year project for masters at Univercity of Nottingham.</p>
+          <p>A phylogenetic tree is a hierarchical graph used to represent evolutionary relationships between organisms. Think tree of life / ancestry of organisms. The project aimed to innovate phylogenetic tree visualisation's by using a number of different techniques. Most notably the use of 3D, VR, sphere coordinates, and hyperbolic space.</p>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9Hj4SF0xNYk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3>Grada, this water bear</h3>
+        <p>My first game project. Winner of the 2015 the Univercity of Hull game-jam Three Thing game. </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZtH2vYvIwQ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div id="menu3" class="tab-pane fade" align="center">
+        <h3>Email: Daniel@llott.co.uk</h3>
+        
+        
+      </div>
+    </div>
+      <script src="pdfobject.min.js"></script>
+      <script>PDFObject.embed("https://cdn.glitch.com/3b1684a4-f340-4b39-bbfd-2a53cb5e7dc5%2FResume.pdf?v=1570003946542", "#res");</script>
     </div>
     
-    <p>
-      text
-    </p>
-
   </body>
 </html>
