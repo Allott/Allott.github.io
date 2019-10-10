@@ -38,6 +38,10 @@ body {
   background-color: #B9993E;
 }
 
+.row{
+  background-color: #44192C;
+}
+
 .row:after {
   content: "";
   display: table;
