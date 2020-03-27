@@ -11,6 +11,10 @@ body {
   margin-top: 420px;
 }
 
+#a {
+  color: #44192C;
+}
+
 .columnL {
   font-family: "lato";
   float: left;
