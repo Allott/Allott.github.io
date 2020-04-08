@@ -15,19 +15,53 @@
       <div align="center">
         <h1>PATHFINDER ULTIMATE GESTALT RANDOMONIUM INFURNO</h1>
         <button type="button" onclick="roll()" class="">Roll</button>
+        <h3 id="counter">
+          
+        </h3>
       </div>
+      
       <div style="color: #B9993E;">
         <div class="m-3 row" style="background-color: #800020; border-radius: 10px;">
           <div class="col-3">
             <h3>Race: </h3>
           </div>
           <div class="col-7">
-            <h3 id="race-box"></h3>
+            <a id="race-box" href=""></a>
           </div>
           <div class="col-2">
+            <button id="butRe1" type="button" onclick="randomRace()" class="" style="display:none">Re-Roll</button>
           </div>
         </div>
       </div>
+      
+      <div style="color: #B9993E;">
+        <div class="m-3 row" style="background-color: #800020; border-radius: 10px;">
+          <div class="col-3">
+            <h3>Class 1: </h3>
+          </div>
+          <div class="col-7">
+            <a id="class1-box" href=""></a>
+          </div>
+          <div class="col-2">
+            <button id="butRe2" type="button" onclick="randomClass1()" class="" style="display:none">Re-Roll</button>
+          </div>
+        </div>
+      </div>
+      
+      <div style="color: #B9993E;">
+        <div class="m-3 row" style="background-color: #800020; border-radius: 10px;">
+          <div class="col-3">
+            <h3>Class 2: </h3>
+          </div>
+          <div class="col-7">
+            <a id="class2-box" href=""></a>
+          </div>
+          <div class="col-2">
+            <button id="butRe3" type="button" onclick="randomClass2()" class="" style="display:none">Re-Roll</button>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </body>
 </html>
