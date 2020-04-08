@@ -1,0 +1,166 @@
+[
+    {
+        "name": "Human",
+        "link": "https://www.d20pfsrd.com/races/core-races/human"
+    },
+    {
+        "name": "Dwarf",
+        "link": "https://www.d20pfsrd.com/races/core-races/dwarf"
+    },
+    {
+        "name": "Elf",
+        "link": "https://www.d20pfsrd.com/races/core-races/elf"
+    },
+    {
+        "name": "Gnome",
+        "link": "https://www.d20pfsrd.com/races/core-races/gnome"
+    },
+    {
+        "name": "Half Elf",
+        "link": "https://www.d20pfsrd.com/races/core-races/half-elf"
+    },
+    {
+        "name": "Half Orc",
+        "link": "https://www.d20pfsrd.com/races/core-races/half-orc"
+    },
+    {
+        "name": "Halfling",
+        "link": "https://www.d20pfsrd.com/races/core-races/halfling"
+    },
+    {
+        "name": "Catfolk",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-catfolk"
+    },
+    {
+        "name": "Duergar",
+        "link": "https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-duergar"
+    },
+    {
+        "name": "Gnoll",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/standard-races-1-10-rp/gnoll-6-rp"
+    },
+    {
+        "name": "Grippli",
+        "link": "https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-grippli"
+    },
+    {
+        "name": "Goblin",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-goblin"
+    },
+    {
+        "name": "Hobgoblin",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-hobgoblin"
+    },
+    {
+        "name": "Ifrit",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-ifrit"
+    },
+    {
+        "name": "Kobald",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-kobold"
+    },
+    {
+        "name": "Lizardfolk",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/standard-races-1-10-rp/lizardfolk-8-rp"
+    },
+    {
+        "name": "Monkey-goblin",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/standard-races-1-10-rp/monkey-goblin-10-rp"
+    },
+    {
+        "name": "Orc",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-orc"
+    },
+    {
+        "name": "Oread",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-oread"
+    },
+    {
+        "name": "Ratfolk",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-ratfolk"
+    },
+    {
+        "name": "Skinwalker",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/standard-races-1-10-rp/skinwalkers-10-rp"
+    },
+    {
+        "name": "Sylph",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-sylph"
+    },
+    {
+        "name": "Triaxian",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/standard-races-1-10-rp/triaxian-10-rp"
+    },
+    {
+        "name": "Undine",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-undine"
+    },
+    {
+        "name": "Vanaras",
+        "link": "https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-vanaras"
+    },
+    {
+        "name": "Dhampir",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-dhampir"
+    },
+    {
+        "name": "Lashunta",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/lashunta-11-rp"
+    },
+    {
+        "name": "Gathlain",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/gathlain-12-rp"
+    },
+    {
+        "name": "Shabit",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/shabti"
+    },
+    {
+        "name": "Tengu",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-tengu"
+    },
+    {
+        "name": "Teifling",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-tiefling"
+    },
+    {
+        "name": "Vishkanyas",
+        "link": "https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-vishkanyas"
+    },
+    {
+        "name": "Drow",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-drow"
+    },
+    {
+        "name": "Aasimar",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-aasimar"
+    },
+    {
+        "name": "Android",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/android-16-rp"
+    },
+    {
+        "name": "Fetchling",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-fetchling"
+    },
+    {
+        "name": "Ghoran",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/ghoran-19-rp"
+    },
+    {
+        "name": "Kasatha",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/kasatha-20-rp"
+    },
+    {
+        "name": "Suli",
+        "link": "https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-suli"
+    },
+    {
+        "name": "Wyrwood",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/wyrwood-20-rp"
+    },
+    {
+        "name": "Wyvaran",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/wyvaran-17-rp"
+    }
+]
