@@ -11,8 +11,20 @@ body {
   margin-top: 420px;
 }
 
-#a {
-  color: #44192C;
+a {
+  color: #B9993E;
+  font-family: "lato";
+}
+
+button {
+  background-color: #4d0013; /* Green */
+  border: none;
+  color: #B9993E;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .columnL {
