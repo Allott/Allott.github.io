@@ -1,0 +1,23 @@
+/* CSS files add styling rules to your content */
+
+body {
+  background-color: #B9993E;
+  font-family: "lato";
+}
+
+h1 {
+  color: #170200;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+a {
+  color: #170200;
+}
+
+label {
+  margin: 4px;
+}
