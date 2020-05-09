@@ -17,45 +17,130 @@ function loadFile(filePath) {//extra
 
 function roll() {
   randomRace()
-  randomClass1()
-  randomClass2()
+  randomClass(class1Box)
+  randomClass(class2Box)
   showReBut()
   count = 0
   counter.innerHTML = count
 }
 
 function randomRace() {
-  var race = JSON.parse(loadFile('race.json'))
-  var roll = Math.floor(Math.random() * 14)
+  //setup
+  var total = 0
+  var sourceList = [];
   
-  if (roll > 7) {
-     roll = Math.floor(Math.random() * 40)
-  } 
+  //add sources
+  //ugly as shit
+  var role
   
-  raceBox.innerHTML = race[roll].name
-  raceBox.href = race[roll].link
-  count = count + 1
-  counter.innerHTML = count
+  //core
+  if (document.getElementById("CoreRCheck").checked) {
+    role = JSON.parse(loadFile('race-core.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //standard
+  if (document.getElementById("StandardRCheck").checked) {
+    role = JSON.parse(loadFile('race-standard.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //advanced
+  if (document.getElementById("AdvancedRCheck").checked) {
+    role = JSON.parse(loadFile('race-advanced.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //roll and find the class
+  var roll = Math.floor(Math.random() * total)
+  for (var i = 0; i < sourceList.length; i++) {
+    if (sourceList[i].count > roll) {
+      //apply class
+      raceBox.innerHTML = sourceList[i].classes[roll].name
+      raceBox.href = sourceList[i].classes[roll].link
+      //increase count
+      count = count + 1
+      counter.innerHTML = count
+      //break
+      i = sourceList.length
+    } else {
+      roll -= sourceList[i].count
+    }
+  }
 }
 
-function randomClass1() {
-  var role = JSON.parse(loadFile('class.json'))
-  var roll = Math.floor(Math.random() * 50)
+function randomClass(box) {
+  //setup
+  var total = 0
+  var sourceList = [];
   
-  class1Box.innerHTML = role[roll].name
-  class1Box.href = role[roll].link
-  count = count + 1
-  counter.innerHTML = count
+  //add sources
+  //ugly as shit
+  var role
+  
+  //core
+  if (document.getElementById("CoreCCheck").checked) {
+    role = JSON.parse(loadFile('class-core.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //base
+  if (document.getElementById("BaseCCheck").checked) {
+    role = JSON.parse(loadFile('class-base.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //hybrid
+  if (document.getElementById("HybridCCheck").checked) {
+    role = JSON.parse(loadFile('class-hybrid.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //occult
+  if (document.getElementById("OccultCCheck").checked) {
+    role = JSON.parse(loadFile('class-occult.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //unchained
+  if (document.getElementById("UnchainedCCheck").checked) {
+    role = JSON.parse(loadFile('class-unchained.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //roll and find the class
+  var roll = Math.floor(Math.random() * total)
+  for (var i = 0; i < sourceList.length; i++) {
+    if (sourceList[i].count > roll) {
+      //apply class
+      box.innerHTML = sourceList[i].classes[roll].name
+      box.href = sourceList[i].classes[roll].link
+      //increase count
+      count = count + 1
+      counter.innerHTML = count
+      //break
+      i = sourceList.length
+    } else {
+      roll -= sourceList[i].count
+    }
+  }    
+}
+
+//old functions
+function randomClass1() {
+  randomClass(class1Box);
 }
 
 function randomClass2() {
-  var role = JSON.parse(loadFile('class.json'))
-  var roll = Math.floor(Math.random() * 50)
-  
-  class2Box.innerHTML = role[roll].name
-  class2Box.href = role[roll].link
-  count = count + 1
-  counter.innerHTML = count
+  randomClass(class2Box);
 }
 
 function showReBut() {
