@@ -1,27 +1,57 @@
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- bootstrap 4 -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- lato -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <title>GESTALT RANDOMONIUM</title>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
     <script src="PUGRI.js" defer></script>
   </head>  
   <body>
-    <div class="m-3">
-      <div align="center">
+    
+    <div align="center" id="title">
         <h1>PATHFINDER ULTIMATE GESTALT RANDOMONIUM INFURNO</h1>
+    </div>
+    
+    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#roll" role="tab" aria-controls="home" aria-selected="true">Roller</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#sources" role="tab" aria-controls="profile" aria-selected="false">Sources</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="contact" aria-selected="false">Settings</a>
+      </li>
+    </ul>
+    
+    <div class="tab-content" id="myTabContent">
+      
+      <div class="tab-pane fade show active" align="center"  id="roll" role="tabpanel" aria-labelledby="home-tab">
+        
         <button type="button" onclick="roll()" class="">Roll</button>
+        
         <div class="row m-3" style="background-color: #B9993E;">
           <h3>Rerolls: </h3>
           <h3 id="counter">0</h3>
         </div>
-      </div>
-      
-      <div style="color: #B9993E;">
+        <div style="color: #B9993E;">
         <div class="m-3 row" style="background-color: #800020; border-radius: 10px;">
           <div class="col-10 align-self-center">
             <div class="d-flex justify-content-start">
@@ -74,7 +104,82 @@
           </div>
         </div>
       </div>
+      </div>
+      
+      <div class="tab-pane fade" id="sources" align="center"  role="tabpanel" aria-labelledby="profile-tab">
+        <div>
+          <h4>
+            Classes
+          </h4>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="CoreCCheck" checked>Core Classes
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="BaseCCheck" checked>Base Classes
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="HybridCCheck" checked>Hybrid Classes
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="UnchainedCCheck" checked>Unchained Classes
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="OccultCCheck">Occult Classes
+          </label>
+        </div>
+        </div>
+        
+        <div>
+          <h4>
+            Races
+          </h4>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="CoreRCheck" checked>Core Races
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="StandardRCheck" checked>Standard Races
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="AdvancedRCheck" checked>Advanced Races
+          </label>
+        </div>
+        
+        <div class="form-check" hidden>
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" id="MPRCheck">Monstrous/Powerful Races
+          </label>
+        </div>
+        </div>
+        
+      </div>
+      
+      <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="contact-tab">
+      </div>
       
     </div>
+    
+    
+    
+    
   </body>
 </html>
