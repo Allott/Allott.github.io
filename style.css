@@ -109,7 +109,7 @@ div.b {
 }
 
 
-/*test123 */
+/*stuff for pathfinder */
 
 h1 {
   color: #170200;
@@ -126,4 +126,14 @@ a {
 
 label {
   margin: 4px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #800020;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #B9993E;
+    background-color: #800020;
+    border-color: #800020 #800020 #800020;
 }
