@@ -24,6 +24,15 @@ function roll() {
   counter.innerHTML = count
 }
 
+function showClass2() {
+  if (document.getElementById("SettingGestalt").checked) {
+    document.getElementById("Class2").style.display = "block";
+  }
+  else {
+    document.getElementById("Class2").style.display = "none";
+  }
+}
+
 function randomRace() {
   //setup
   var total = 0
@@ -40,6 +49,15 @@ function randomRace() {
     total += role.count
   }
   
+  //bonus core
+  if (document.getElementById("SettingRace").checked) {
+    role = JSON.parse(loadFile('race-core.json'))
+    sourceList.push(role)
+    sourceList.push(role)
+    total += role.count
+    total += role.count
+  }
+  
   //standard
   if (document.getElementById("StandardRCheck").checked) {
     role = JSON.parse(loadFile('race-standard.json'))
@@ -50,6 +68,13 @@ function randomRace() {
   //advanced
   if (document.getElementById("AdvancedRCheck").checked) {
     role = JSON.parse(loadFile('race-advanced.json'))
+    sourceList.push(role)
+    total += role.count
+  }
+  
+  //mp
+  if (document.getElementById("MPRCheck").checked) {
+    role = JSON.parse(loadFile('race-mp.json'))
     sourceList.push(role)
     total += role.count
   }
@@ -85,6 +110,15 @@ function randomClass(box) {
   if (document.getElementById("CoreCCheck").checked) {
     role = JSON.parse(loadFile('class-core.json'))
     sourceList.push(role)
+    total += role.count
+  }
+  
+  //bonus core
+  if (document.getElementById("SettingClass").checked) {
+    role = JSON.parse(loadFile('class-core.json'))
+    sourceList.push(role)
+    sourceList.push(role)
+    total += role.count
     total += role.count
   }
   
