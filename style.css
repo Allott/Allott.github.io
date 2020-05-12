@@ -1,45 +1,139 @@
-/* CSS files add styling rules to your content */
-/*https://fonts.google.com/specimen/Lato?selection.family=Lato*/
+html,
 body {
-  font-family: "lato";
   margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #B9993E;
 }
 
-h1 {
-  color: #E79C57;
-  font-size: 50px;
-  text-align: center;
+#h1 {
   margin-top: 420px;
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: #8C3022;
+a {
+  color: #B9993E;
+  font-family: "lato";
 }
 
-.navbar a {
-  float: left;
-  display: block;
-  color: #E79C57;
+button {
+  background-color: #4d0013; /* Green */
+  border: none;
+  color: #B9993E;
+  padding: 10px 10px;
   text-align: center;
-  padding: 14px 20px;
   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-.header {
+.columnL {
+  font-family: "lato";
+  float: left;
+  width: 35%;
+  padding: 20px;
+  text-align: right;
+  color: #B9993E;
+  background-color: #44192C;
+}
+
+.columnR {
+  font-family: "lato";
+  float: left;
+  width: 65%;
   padding: 20px;
   text-align: left;
-  background: #1F0004;
-  color: white;
+  color: #B9993E;
+  background-color: #44192C;
 }
 
-.header:after {
-content: "";
-display: table;
-clear: both;
+.tab-pane {
+  font-family: "lato";
+  padding: 20px;
+  color: #44192C;
+  background-color: #B9993E;
 }
 
-.column {
-float: left;
-width: 50%;
+.row{
+  background-color: #44192C;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#content {
+}
+
+.pdfobject-container {
+  height: 90rem;
+  width: 70rem;
+  border: 1rem solid rgba(0, 0, 0, 0.1);
+}
+
+div.b {
+  width: 600px;
+  font-size: 15px;
+}
+
+#nav {
+  background-color: #800020;
+  padding: 15px;
+  font-family: "lato";
+}
+
+#bar {
+  background-color: #800020;
+  padding: 5px;
+}
+
+.nav-pills a {
+  font-family: "lato";
+  color: #B9993E;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.nav-pills > li > a.tabc {
+  color: #B9993E;
+  border: none;
+}
+
+.nav-pills > li.active > a.tabc {
+  background-color: #C13E1D;
+}
+
+
+/*stuff for pathfinder */
+
+h1 {
+  color: #170200;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+a {
+  color: #170200;
+}
+
+label {
+  margin: 4px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #800020;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #B9993E;
+    background-color: #800020;
+    border-color: #800020 #800020 #800020;
 }

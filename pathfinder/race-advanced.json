@@ -1,0 +1,69 @@
+{
+	"name": "advanced",
+	"count": 16,
+	"classes": [{
+        "name": "Dhampir",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-dhampir"
+    },
+    {
+        "name": "Lashunta",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/lashunta-11-rp"
+    },
+    {
+        "name": "Gathlain",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/gathlain-12-rp"
+    },
+    {
+        "name": "Shabit",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/shabti"
+    },
+    {
+        "name": "Tengu",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-tengu"
+    },
+    {
+        "name": "Teifling",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-tiefling"
+    },
+    {
+        "name": "Vishkanyas",
+        "link": "https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-vishkanyas"
+    },
+    {
+        "name": "Drow",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-drow"
+    },
+    {
+        "name": "Aasimar",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-aasimar"
+    },
+    {
+        "name": "Android",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/android-16-rp"
+    },
+    {
+        "name": "Fetchling",
+        "link": "https://www.d20pfsrd.com/races/other-races/featured-races/arg-fetchling"
+    },
+    {
+        "name": "Ghoran",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/ghoran-19-rp"
+    },
+    {
+        "name": "Kasatha",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/kasatha-20-rp"
+    },
+    {
+        "name": "Suli",
+        "link": "https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-suli"
+    },
+    {
+        "name": "Wyrwood",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/wyrwood-20-rp"
+    },
+    {
+        "name": "Wyvaran",
+        "link": "https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/wyvaran-17-rp"
+    }
+  ]
+}
