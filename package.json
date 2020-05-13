@@ -19,7 +19,8 @@
   "dependencies": {
     "backbone": "^1.4.0",
     "grunt": "^1.1.0",
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
     "grunt-contrib-concat": "^1.0.1",

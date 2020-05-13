@@ -5,11 +5,15 @@ module.exports = function(grunt) {
         concat: {
             js: {
                 src : ['js/1.js','js/2.js'],
-                dest: 'build/main.js',
+                dest: 'main.js',
             },
             css: {
                 src : ['css/1.css','css/2.css'],
-                dest: 'build/styles.css',
+                dest: 'style.css',
+            },
+            html: {
+                src : ['html/main.html'],
+                dest: 'index.html',
             },
         },
         watch: {
@@ -20,8 +24,12 @@ module.exports = function(grunt) {
             css: {
                 files: 'css/**/*.css',
                 tasks: ['concat:css'],
-              },
-          },
+            },
+            html: {
+              files: 'html/**/*.html',
+              tasks: ['concat:html'],
+            },
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
