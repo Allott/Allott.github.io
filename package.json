@@ -1,0 +1,28 @@
+{
+  "name": "allott.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allott/Allott.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Allott/Allott.github.io/issues"
+  },
+  "homepage": "https://github.com/Allott/Allott.github.io#readme",
+  "dependencies": {
+    "backbone": "^1.4.0",
+    "grunt": "^1.1.0",
+    "handlebars": "^4.7.6"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
