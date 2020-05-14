@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Allott/Allott.github.io#readme",
   "dependencies": {
     "backbone": "^1.4.0",
+    "bootstrap": "^4.5.0",
     "grunt": "^1.1.0",
     "handlebars": "^4.7.6",
     "jquery": "^3.5.1"
