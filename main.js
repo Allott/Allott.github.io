@@ -1,4 +1,6 @@
-$.getJSON("json/class-core.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
-});
+var template = document.getElementById("template");
+var compiledTemplate = Handlebars.compile(template);
+var generatedHTLM = compiledTemplate(JSON.parse(loadFile('json/class-core.json')));
+document.getElementById("pets-container").innerHTML = generatedHTLM;
+
 //good day? could be better
