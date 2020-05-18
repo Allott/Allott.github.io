@@ -9,7 +9,8 @@ function loadFile(filePath) {//extra
     return result
   }
 
-var template = document.getElementById("template");
+var template = document.getElementById('itemContainer');//.inner
+console.log(template.innerHTML);
 var compiledTemplate = Handlebars.compile(template);
 var generatedHTLM = compiledTemplate(JSON.parse(loadFile('json/class-core.json')));
 document.getElementById("pets-container").innerHTML = generatedHTLM;

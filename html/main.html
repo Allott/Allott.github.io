@@ -27,13 +27,15 @@
         <h1>Currently updating this site and by extention my life</h1>
 
         
-        <script id="template" type="test/x-handlebars-template">
-            {{each #classes}}
-                <h2>{{name}}</h2>
-            {{/each}}
+        <script id="template" type="text/x-handlebars-template">
+            {{#each classes}}
+                <h2>name:{{this.name}}</h2>
+            {{/each}} 
         </script>
 
-        <div id="itemContainer"></div>
+        <div id="itemContainer">yo
+            <div></div>
+        </div>
 
     </body>
 </html>
