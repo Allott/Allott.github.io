@@ -9,10 +9,11 @@ function loadFile(filePath) {//extra
     return result
   }
 
-var template = document.getElementById('itemContainer');//.inner
-console.log(template.innerHTML);
+var role = JSON.parse(loadFile('json/class-core.json'));
+
+var template = document.getElementById('template').innerHTML;
 var compiledTemplate = Handlebars.compile(template);
-var generatedHTLM = compiledTemplate(JSON.parse(loadFile('json/class-core.json')));
+var generatedHTLM = compiledTemplate(role);
 document.getElementById("pets-container").innerHTML = generatedHTLM;
 
 //good day? could be better, could be worse
