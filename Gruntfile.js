@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concat: {
             js: {
-                src : ['js/handlebars.js','js/2.js'],
+                src : ['js/front.js','js/model/itemModel.js','js/view/contentsView.js','js/view/documentView.js','js/end.js'],
                 dest: 'main.js',
             },
             css: {
