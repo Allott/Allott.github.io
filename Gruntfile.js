@@ -10,11 +10,7 @@ module.exports = function(grunt) {
             css: {
                 src : ['css/1.css','css/2.css'],
                 dest: 'style.css',
-            },
-            html: {
-                src : ['html/main.html'],
-                dest: 'index.html',
-            },
+            }
         },
         watch: {
             js: {
@@ -25,17 +21,28 @@ module.exports = function(grunt) {
                 files: 'css/**/*.css',
                 tasks: ['concat:css'],
             },
-            html: {
-              files: 'html/**/*.html',
-              tasks: ['concat:html'],
-            },
+            templates: {
+                files: 'templates/**/*.handlebars',
+                tasks: ['handlebars'],
+            }
         },
+        handlebars: {
+            compile : {
+                options: {
+
+                },
+                files: {
+                    'templates.js' : 'templates/**/*.handlebars'
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
 
-    grunt.registerTask('default', ['concat','watch']);
+    grunt.registerTask('default', ['concat', 'handlebars']);
 
     grunt.registerTask('hello', function() {
         console.log('hello world')

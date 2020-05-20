@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-handlebars": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0"
   }
 }
