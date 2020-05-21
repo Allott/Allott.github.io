@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concat: {
             js: {
-                src : ['js/front.js','js/model/itemModel.js','js/view/contentsView.js','js/view/documentView.js','js/end.js'],
+                src : ['js/front.js','js/model/itemModel.js','js/view/contentsView.js','js/view/documentView.js','js/view/documentListView.js','js/end.js'],
                 dest: 'main.js',
             },
             css: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
 
-    grunt.registerTask('default', ['concat', 'handlebars']);
+    grunt.registerTask('default', ['concat']); //ahndle bars currently broke, manual for now
 
     grunt.registerTask('hello', function() {
         console.log('hello world')

@@ -2,9 +2,9 @@ var ContentsView = Backbone.View.extend({
     template: Handlebars.templates.contents,
 
     render: function () {
-        var rendered = this.template(this.collection);
-        //document.getElementById("itemContainer").innerHTML = rendered;
-        this.$el.append(rendered);
+        _(this.collection).each(function (document) {
+            this.$el.append(new DocumentListView({model: document}).render().el);
+        }, this);
         return this;
     }
 });
