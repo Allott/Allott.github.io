@@ -9,3 +9,6 @@ function loadFile(filePath) {//extra
   }
   return result
 }
+
+
+var eventAggregator = _.extend({}, Backbone.Events);

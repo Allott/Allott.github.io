@@ -1,7 +1,3 @@
-
-
-
-
 var data = JSON.parse(loadFile('json/class-core.json'));
 
 var items = [];
@@ -13,18 +9,31 @@ for (var i = 0; i < data.count; i++){//one json object to lots of individual ite
         })
     )
 }
-//console.log(items)
-
 
 //move to Router.js ?
 var ItemRouter = Backbone.Router.extend({
     routes: {
-        'contents': 'contents'
+        'contents': 'contents',
+        'view/:title': 'viewItem'
     },
     contents: function () {
         $('body').html(new ContentsView({collection: items}).render().el)
+    },
+
+    viewItem: function (title) {//find item via title
+        var selectedItem = _(items).find(function (item) {
+            return item.get('name') === title;
+        });
+
+        $('body').empty().append(new ItemView({model: selectedItem}).render().
+        el);
     }
 });
+
+eventAggregator.on('item:selected', function name(item) {
+    var urlPath = 'view/' + item.get('name');
+    router.navigate(urlPath, {trigger: true});
+})
 
 var router = new ItemRouter();
 Backbone.history.start();
@@ -33,3 +42,6 @@ router.navigate('contents', {trigger:true});
 
 
 
+//to do
+//fix grunt precomp
+//
