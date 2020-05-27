@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concat: {
             js: {
-                src : ['js/front.js','js/model/itemModel.js','js/view/contentsView.js','js/view/itemView.js','js/view/itemListView.js','js/end.js'],
+                src : ['js/front.js','js/model/diceModel.js','js/model/poolCollection.js','js/view/poolView.js','js/end.js'],
                 dest: 'main.js',
             },
             css: {
@@ -29,10 +29,14 @@ module.exports = function(grunt) {
         handlebars: {
             compile : {
                 options: {
-
+                    namespace: false,
+                    wrapped: true,
+                    //partialsUseNamespace: true,
+                    //amd: true,
+                    //commonjs: true,
                 },
                 files: {
-                    'templates.js' : 'templates/**/*.handlebars'
+                    'templates2.js' : 'templates/**/*.handlebars'
                 }
             }
         }

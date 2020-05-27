@@ -7,7 +7,7 @@ var ItemListView = Backbone.View.extend({
         }
     },
     render: function () {
-        var rendered = this.template(this.model.toJSON());//.get('name')
+        var rendered = this.template(this.model.toJSON());
         this.$el.html(rendered);
         return this;
     }
