@@ -1,9 +1,10 @@
 var PoolView = Backbone.View.extend({
-    template: Handlebars.templates.test,
+    template: Handlebars.templates.pool,
 
     render: function () {
-        var rendered = this.template(this.model.toJSON());
-        this.$el.html(rendered);
+        console.log(this.model);
+        //var rendered = this.template(this.model.toJSON());
+        //this.$el.html(rendered);
         return this;
     }
 });

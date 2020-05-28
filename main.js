@@ -23,24 +23,57 @@ var dice = Backbone.Model.extend({
         return  this.values[randomNumber];
     }
 })
-var pool = Backbone.Collection.extend({
-    model: dice
-}, {
+var pool = Backbone.Model.extend({
+
+    defaults: {
+        name: '4D6',
+        diceCount: [4],
+        diceValues: [new dice()]
+    },
+
     roll: function () {
         var total;
-        for (var i = 0; i < this.length; i++) 
+        for (var i = 0; i < this.diceValues.length; i++) 
         {
-            total += this.models[i].roll();
+            for (var j = 0; j < this.diceCount[i]; j++)
+            {
+                total += this.diceValues[i].roll();
+            }
         }
         return total;
     }
+})
+var pools = Backbone.Model.extend({
+    model: pool
 });
-var PoolView = Backbone.View.extend({
-    template: Handlebars.templates.test,
+var PoolsView = Backbone.View.extend({
+    template: Handlebars.templates.PoolsView,
+    tagName: 'li',
 
     render: function () {
-        var rendered = this.template(this.model.toJSON());
-        this.$el.html(rendered);
+        // _(this.collection).each(function (item) {
+        //     this.$el.append(new PoolView({model: item}).render().el);
+        // }, this);
+        console.log(this.collection.attributes);
+
+        // for(var i=0; i<this.collection.attributes.length; i++)
+        // {
+        //     this.$el.append(new PoolView({model: this.collection.attributes[i]}).render().el);
+        // }
+
+        _(this.collection.attributes).each(function (m) {
+            this.$el.append(new PoolView({model: m}).render().el);
+        }, this)
+        return this;
+    }
+});
+var PoolView = Backbone.View.extend({
+    template: Handlebars.templates.pool,
+
+    render: function () {
+        console.log(this.model);
+        //var rendered = this.template(this.model.toJSON());
+        //this.$el.html(rendered);
         return this;
     }
 });
@@ -56,12 +89,13 @@ var PoolView = Backbone.View.extend({
 //     )
 // }
 
-var dice1 = new dice();
-var dice2 = new dice();
+var d6 = new dice();
+var d8 = new dice();
 
-var pool1 = new pool([
-    dice1, dice2
-]);
+var pool1 = new pool();
+var pool2 = new pool();
+
+var pools = new pools([pool1,pool2]);
 
 //move to Router.js ?
 var ItemRouter = Backbone.Router.extend({
@@ -70,7 +104,7 @@ var ItemRouter = Backbone.Router.extend({
         //'view/:title': 'viewItem'
     },
     contents: function () {
-        $('body').html(new PoolView({model: pool1}).render().el)
+        $('body').html(new PoolsView({collection: pools}).render().el)
     }
 
     // viewItem: function (title) {//find item via title
