@@ -15,12 +15,14 @@ var eventAggregator = _.extend({}, Backbone.Events);
 var dice = Backbone.Model.extend({
     defaults: {
         name: 'D6',
-        values: [1,2,3,4,5,6]
+        values: [1,2,3,4,5,6],
+        lastRoll: null
     },
 
     roll: function () {
-        var randomNumber = Math.floor(Math.random() * this.values.length);
-        return  this.values[randomNumber];
+        var randomNumber = Math.floor(Math.random() * this.attributes.values.length);
+        this.attributes.lastRoll = this.attributes.values[randomNumber];
+        return  this.attributes.values[randomNumber];
     }
 })
 var pool = Backbone.Model.extend({
@@ -28,18 +30,20 @@ var pool = Backbone.Model.extend({
     defaults: {
         name: '4D6',
         diceCount: [4],
-        diceValues: [new dice()]
+        diceValues: [new dice()],
+        lastRoll: null
     },
 
     roll: function () {
-        var total;
-        for (var i = 0; i < this.diceValues.length; i++) 
+        var total = 0;
+        for (var i = 0; i < this.attributes.diceValues.length; i++) 
         {
-            for (var j = 0; j < this.diceCount[i]; j++)
+            for (var j = 0; j < this.attributes.diceCount[i]; j++)
             {
-                total += this.diceValues[i].roll();
+                total = total + this.attributes.diceValues[i].roll();
             }
         }
+        this.attributes.lastRoll = total;
         return total;
     }
 })
@@ -48,20 +52,12 @@ var pools = Backbone.Model.extend({
 });
 var PoolsView = Backbone.View.extend({
     template: Handlebars.templates.PoolsView,
-    tagName: 'li',
+    tagName: 'div',
 
     render: function () {
-        // _(this.collection).each(function (item) {
-        //     this.$el.append(new PoolView({model: item}).render().el);
-        // }, this);
-        console.log(this.collection.attributes);
-
-        // for(var i=0; i<this.collection.attributes.length; i++)
-        // {
-        //     this.$el.append(new PoolView({model: this.collection.attributes[i]}).render().el);
-        // }
 
         _(this.collection.attributes).each(function (m) {
+            m.roll();
             this.$el.append(new PoolView({model: m}).render().el);
         }, this)
         return this;
@@ -71,9 +67,8 @@ var PoolView = Backbone.View.extend({
     template: Handlebars.templates.pool,
 
     render: function () {
-        console.log(this.model);
-        //var rendered = this.template(this.model.toJSON());
-        //this.$el.html(rendered);
+        var rendered = this.template(this.model.toJSON());
+        this.$el.html(rendered);
         return this;
     }
 });
@@ -127,7 +122,7 @@ Backbone.history.start();
 
 router.navigate('contents', {trigger:true});
 
-
+console.log(d6.roll())
 
 //to do
 //fix grunt precomp

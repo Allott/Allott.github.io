@@ -48,7 +48,7 @@ Backbone.history.start();
 
 router.navigate('contents', {trigger:true});
 
-
+console.log(d6.roll())
 
 //to do
 //fix grunt precomp
