@@ -1,0 +1,33 @@
+{
+	"name": "core",
+	"count": 7,
+	"classes": [{
+        "name": "Human",
+        "link": "https://www.d20pfsrd.com/races/core-races/human"
+    },
+    {
+        "name": "Dwarf",
+        "link": "https://www.d20pfsrd.com/races/core-races/dwarf"
+    },
+    {
+        "name": "Elf",
+        "link": "https://www.d20pfsrd.com/races/core-races/elf"
+    },
+    {
+        "name": "Gnome",
+        "link": "https://www.d20pfsrd.com/races/core-races/gnome"
+    },
+    {
+        "name": "Half Elf",
+        "link": "https://www.d20pfsrd.com/races/core-races/half-elf"
+    },
+    {
+        "name": "Half Orc",
+        "link": "https://www.d20pfsrd.com/races/core-races/half-orc"
+    },
+    {
+        "name": "Halfling",
+        "link": "https://www.d20pfsrd.com/races/core-races/halfling"
+    }
+  ]
+}
