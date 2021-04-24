@@ -1,0 +1,29 @@
+body {
+  font-family: "lato";
+  background-color: #B9993E;
+  margin: 0;
+  padding: 0;
+}
+
+.Topper {
+  background-color: #782435;
+  padding: 0px;
+}
+
+.Topper img{
+  width: 50%;
+  height: 50%;
+  max-width: 450px;
+  max-height: 450px;
+}
+
+.Content {
+  text-align: center;
+  color: #44192C;
+  font-size: 20px;
+}
+
+.Content a {
+  color: #44192C;
+  text-decoration: none;
+}
